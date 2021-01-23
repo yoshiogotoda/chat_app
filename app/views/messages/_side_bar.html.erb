@@ -8,7 +8,7 @@
       </div>
   </div>
   <div class="side_body">
-   <% @rooms.each do |room| %>
+   <% current_user.rooms.each do |room| %>
     <div class="room">
       <div class="room_name">
         <a href="#"><%= room.name %></a>
