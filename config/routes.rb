@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
-  root to: "messages#index"
-  resources :tweets 
+  root to: "rooms#index"
+  resources :messages, only: :index
   resources :users, only: [:edit, :update]
+  resources :rooms, only: [:new, :create]
 end
